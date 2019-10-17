@@ -5,5 +5,8 @@ node('MVN') {
     stage('Build'){
         sh label: '', script: 'mvn package'
     }
-
+    stage('Archive'){
+        archive 'gameoflife-web\\target\\*.war'
+        junit 'gameoflife-web\\target\\surefire-reports/*.xml'
+    }
 }
