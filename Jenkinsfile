@@ -6,10 +6,7 @@ node('MVN'){
     stage('Build'){
         sh 'mvn install'
     }
-    stage(Dummy'){
-        sh 'pwd'
-    }
-	stage('dummy'){
+    stage('dummy'){
 	    sh 'pwd'
 	}
     stage('Archive'){
