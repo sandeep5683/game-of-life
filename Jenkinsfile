@@ -8,5 +8,6 @@ node('MVN'){
     }
     stage('Archive'){
         archive 'gameoflife-web/target/*.jar'
+        junit 'gameoflife-web/target/surefire-reports/*.xml'
     }
 }
