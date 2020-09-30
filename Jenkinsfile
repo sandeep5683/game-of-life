@@ -6,4 +6,7 @@ node('MVN'){
     stage('Build'){
         sh 'mvn package'
     }
+	stage('Archive){
+	    archive 'gameoflife-web/target/*.jar'
+	}
 }
