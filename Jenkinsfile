@@ -9,6 +9,9 @@ node('MVN'){
     stage(Dummy'){
         sh 'pwd'
     }
+	stage('dummy'){
+	    sh 'pwd'
+	}
     stage('Archive'){
         archiveArtifacts 'gameoflife-web/target/*.war'
         junit 'gameoflife-web/target/surefire-reports/*.xml'
